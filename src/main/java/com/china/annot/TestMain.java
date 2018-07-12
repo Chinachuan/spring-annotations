@@ -6,8 +6,9 @@ public class TestMain {
 		
 		
 		System.out.println("测试方法");
-		System.out.println("=======================");
-		System.out.println("=======================");
+		System.out.println("=======================1");
+		System.out.println("=======================2");
+		System.out.println("=======================3");
 	}
 
 }
