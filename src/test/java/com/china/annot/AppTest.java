@@ -1,38 +1,15 @@
 package com.china.annot;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
 /**
- * Unit test for simple App.
+ * @ClassName: AppTest
+ * @Description: TODO(测试类) 
+ * @author: Jiuchuan.Shi
+ * @Date: 2018年7月12日 下午6:41:00
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+public class AppTest{
+	
+	public static void main(String[] args) {
+		System.out.println("测试类。。。");
+	}
+	
 }
