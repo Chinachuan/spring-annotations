@@ -1,10 +1,12 @@
 package com.china.controller;
 
-import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.china.entity.User;
 import com.china.service.UserService;
@@ -15,7 +17,7 @@ import com.china.service.UserService;
  * @author: Jiuchuan.Shi
  * @Date: 2018年7月12日 下午7:52:15
  */
-@RestController
+@Controller
 public class UserController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -23,20 +25,15 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	@Test
-	public void addUsers(){
+	@RequestMapping(value = "/addUser",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+	public String addUsers(){
 		
 		logger.info("----------------------开始执行------------------------");
-		
-		try {
-			User user = new User();
-			int result = userService.addUser(user);
-			System.out.println("信息：" + result);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-		
-		logger.info("----------------------------------------------");
+
+		User user = new User();
+		user.setEmail("602030912@qq.com");
+		userService.addUser(user);
+		return "user/userInfo";
 	}
 	
 	
