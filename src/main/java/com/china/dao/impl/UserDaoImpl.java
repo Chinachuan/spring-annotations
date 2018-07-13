@@ -17,12 +17,12 @@ import com.china.entity.User;
 public class UserDaoImpl implements UserDao{
 
 	@Override
-	public int addUser(User user) {
+	public int addUser(String name, String show_name, String card_id, String phone, int age, String email,
+			String sex, String address) {
 		// TODO Auto-generated method stub
-		System.out.println("添加用户。。。" + user);
 		return 0;
 	}
-
+	
 	@Override
 	public int updateUser(long id, User user) {
 		// TODO Auto-generated method stub
@@ -45,10 +45,13 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public List<User> findUser() {
+	public List<User> findAllUser() {
 		// TODO Auto-generated method stub
 		System.out.println("查询全部用户。。。");
 		return null;
 	}
+
+	
+
 
 }

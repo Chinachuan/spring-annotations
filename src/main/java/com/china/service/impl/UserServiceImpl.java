@@ -25,7 +25,8 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public int addUser(User user) {
 		// TODO Auto-generated method stub
-		return userDao.addUser(user);
+		int data = userDao.addUser(user.getName(), "", "", "", 23, user.getEmail(), "", "");
+		return data;
 	}
 
 	@Override
@@ -47,9 +48,9 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<User> findUser() {
+	public List<User> findAllUser() {
 		// TODO Auto-generated method stub
-		return userDao.findUser();
+		return userDao.findAllUser();
 	}
 
 }

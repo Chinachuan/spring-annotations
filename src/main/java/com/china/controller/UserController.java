@@ -29,10 +29,12 @@ public class UserController {
 	public String addUsers(){
 		
 		logger.info("----------------------开始执行------------------------");
-
 		User user = new User();
 		user.setEmail("602030912@qq.com");
 		userService.addUser(user);
+		
+		userService.findAllUser();
+		
 		return "user/userInfo";
 	}
 	

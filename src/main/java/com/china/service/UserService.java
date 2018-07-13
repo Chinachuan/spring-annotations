@@ -42,6 +42,6 @@ public interface UserService {
 	 * 查询用户的全部信息
 	 * @return
 	 */
-	public List<User> findUser();
+	public List<User> findAllUser();
 
 }
