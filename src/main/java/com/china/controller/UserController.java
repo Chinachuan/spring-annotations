@@ -1,10 +1,13 @@
 package com.china.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -26,14 +29,34 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping(value = "/addUser",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
-	public String addUsers(){
+	public String addUsers(Model model){
 		
-		logger.info("----------------------开始执行------------------------");
+		logger.info("----------------------添加用户------------------------");
+		
 		User user = new User();
-		user.setEmail("602030912@qq.com");
-		userService.addUser(user);
+		user.setName("小李");
+		user.setShowName("越努力越幸运");
+		user.setCardID("52212693466353X");
+		user.setPhone("18753527732");
+		user.setEmail("18753527732@163.com");
+		user.setSex("男");
+		user.setAge(24);
+		user.setAddress("山西大同");
 		
-		userService.findAllUser();
+		userService.addUser(user);
+		List<User> listUser = userService.findAllUser();
+		model.addAttribute("listUser", listUser);
+		
+		return "user/userInfo";
+	}
+	
+	@RequestMapping(value = "/findAllUsers",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+	public String findAllUsers(Model model){
+		
+		logger.info("----------------------查询所有的用户信息------------------------");
+		
+		List<User> listUser = userService.findAllUser();
+		model.addAttribute("listUser", listUser);
 		
 		return "user/userInfo";
 	}

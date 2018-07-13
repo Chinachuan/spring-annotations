@@ -25,7 +25,14 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public int addUser(User user) {
 		// TODO Auto-generated method stub
-		int data = userDao.addUser(user.getName(), "", "", "", 23, user.getEmail(), "", "");
+		int data = userDao.addUser(user.getName(), 
+				user.getShowName(), 
+				user.getCardID(), 
+				user.getPhone(), 
+				user.getAge(), 
+				user.getEmail(), 
+				user.getSex(), 
+				user.getAddress());
 		return data;
 	}
 

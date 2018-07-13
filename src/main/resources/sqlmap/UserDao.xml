@@ -4,7 +4,13 @@
     <resultMap id="BaseResultMap" type="com.china.entity.User">
         <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="name" jdbcType="VARCHAR" property="name"/>
-        <result column="show_ame" jdbcType="VARCHAR" property="showName"/>
+        <result column="show_name" jdbcType="VARCHAR" property="showName"/>
+        <result column="card_id" jdbcType="VARCHAR" property="cardID"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="age" jdbcType="VARCHAR" property="age"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="sex" jdbcType="VARCHAR" property="sex"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
     </resultMap>
 
     
