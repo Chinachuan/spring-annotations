@@ -10,8 +10,16 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
 
-@ComponentScan(basePackages = "com.china")
-//@ComponentScan("com.china,com.study")
+/**
+ * excludeFilters 包扫描的排除规则
+ * FilterType  排除规则 ANNOTATION是根据注解排除
+ * classes 要排除那些类型
+ */
+//@ComponentScan(value = "com.china",excludeFilters = {
+//		@Filter(type=FilterType.ANNOTATION, classes = {Controller.class,Service.class})
+//})
+
+@ComponentScan(basePackages = "com.china")  // 配置单个扫描包 
 @SpringBootApplication
 public class ApplicationStart {
 	
@@ -19,9 +27,10 @@ public class ApplicationStart {
 	private static final Logger Logger = LoggerFactory.getLogger(ApplicationStart.class);
 	
 	public static void main(String[] args) throws Exception {
+		
 		// Springboot启动类
 		SpringApplication springApplication = new SpringApplication(ApplicationStart.class);
-		
+
 		// 获取java虚拟机的对象类
 		Environment environment = springApplication.run().getEnvironment();
 		
