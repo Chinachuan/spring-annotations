@@ -11,6 +11,7 @@ import org.springframework.core.env.Environment;
 
 
 @ComponentScan(basePackages = "com.china")
+//@ComponentScan("com.china,com.study")
 @SpringBootApplication
 public class ApplicationStart {
 	
