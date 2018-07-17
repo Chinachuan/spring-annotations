@@ -1,4 +1,4 @@
-package com.china.study.annot;
+package com.china.study.annot.one;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

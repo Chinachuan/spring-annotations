@@ -1,6 +1,5 @@
-package com.china.study.annot;
+package com.china.study.annot.one;
 
-import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
 

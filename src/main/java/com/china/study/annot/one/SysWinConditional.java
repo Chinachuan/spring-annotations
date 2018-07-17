@@ -1,4 +1,4 @@
-package com.china.study.annot;
+package com.china.study.annot.one;
 
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;

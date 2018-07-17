@@ -1,4 +1,4 @@
-package com.china.study.annot;
+package com.china.study.annot.one;
 
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;

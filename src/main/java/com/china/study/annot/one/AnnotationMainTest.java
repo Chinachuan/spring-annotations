@@ -1,4 +1,4 @@
-package com.china.study.annot;
+package com.china.study.annot.one;
 
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -7,7 +7,19 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.env.Environment;
 
+/**
+ * @ClassName: AnnotationMainTest
+ * @Description: TODO(注解驱动测试类) 
+ * @author: Jiuchuan.Shi
+ * @Date: 2018年7月17日 上午10:12:33
+ */
 public class AnnotationMainTest {
+	
+	/**
+	 * 说明：
+	 *   该类主要测试了Bean的创建，条件扫描，注入，单例模式，多例模式
+	 *   懒加载，组件的导入以及自定义手动导入，工厂bean的使用，工厂单例多例模式
+	 */
 	
 	private static final Logger logger = LoggerFactory.getLogger(AnnotationMainTest.class);
 	
