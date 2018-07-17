@@ -1,23 +1,33 @@
-package com.china.service;
+package com.china.dev.dao;
 
 import java.util.List;
 
-import com.china.entity.User;
+import org.apache.ibatis.annotations.Param;
+
+import com.china.dev.entity.User;
 
 /**
- * @ClassName: UserService
- * @Description: TODO(用户管理业务处理) 
+ * @ClassName: UserDao
+ * @Description: TODO(用户管理) 
  * @author: Jiuchuan.Shi
- * @Date: 2018年7月12日 下午7:46:07
+ * @Date: 2018年7月12日 下午7:37:38
  */
-public interface UserService {
+public interface UserDao {
 	
 	/**
 	 * 添加用户
 	 * @param user
 	 * @return
 	 */
-	public int addUser(User user);
+	public int addUser(
+			@Param("name")String name,
+			@Param("show_name")String show_name,
+			@Param("card_id")String card_id,
+			@Param("phone")String phone,
+			@Param("age")int age,
+			@Param("email")String email,
+			@Param("sex")String sex,
+			@Param("address")String address);
 	/**
 	 * 修改用户的信息
 	 * @param id
@@ -43,5 +53,7 @@ public interface UserService {
 	 * @return
 	 */
 	public List<User> findAllUser();
+	
+	
 
 }

@@ -35,6 +35,8 @@ public class SysLinuxConditional implements Condition{
 		// 判断容器中是否包含 EntityTest
 		boolean definition = registry.containsBeanDefinition("EntityTest");
 		
+		System.out.println("SysLinuxConditional ==>" + beanFactory +","+classLoader+","+definition);
+		
 		if(property.contains("linux")){
 			return true;
 		}

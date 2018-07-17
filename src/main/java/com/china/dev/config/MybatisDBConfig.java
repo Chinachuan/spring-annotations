@@ -1,4 +1,4 @@
-package com.china.config;
+package com.china.dev.config;
 
 import javax.sql.DataSource;
 import org.apache.ibatis.session.SqlSessionFactory;

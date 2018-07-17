@@ -1,4 +1,4 @@
-package com.china.entity;
+package com.china.dev.entity;
 
 /**
  * @ClassName: User

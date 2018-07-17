@@ -19,7 +19,7 @@ import org.springframework.core.env.Environment;
 //		@Filter(type=FilterType.ANNOTATION, classes = {Controller.class,Service.class})
 //})
 
-@ComponentScan(basePackages = "com.china")  // 配置单个扫描包 
+@ComponentScan(basePackages = "com.china.dev")  // 配置单个扫描包 
 @SpringBootApplication
 public class ApplicationStart {
 	

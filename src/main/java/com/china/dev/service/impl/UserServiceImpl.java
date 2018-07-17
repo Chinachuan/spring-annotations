@@ -1,13 +1,13 @@
-package com.china.service.impl;
+package com.china.dev.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.china.dao.UserDao;
-import com.china.entity.User;
-import com.china.service.UserService;
+import com.china.dev.dao.UserDao;
+import com.china.dev.entity.User;
+import com.china.dev.service.UserService;
 
 /**
  * @ClassName: UserServiceImpl

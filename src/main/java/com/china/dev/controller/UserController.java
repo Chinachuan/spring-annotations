@@ -1,4 +1,4 @@
-package com.china.controller;
+package com.china.dev.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.china.entity.User;
-import com.china.service.UserService;
+import com.china.dev.entity.User;
+import com.china.dev.service.UserService;
 
 /**
  * @ClassName: UserController

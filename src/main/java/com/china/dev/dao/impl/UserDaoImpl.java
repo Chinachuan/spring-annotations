@@ -1,11 +1,11 @@
-package com.china.dao.impl;
+package com.china.dev.dao.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.china.dao.UserDao;
-import com.china.entity.User;
+import com.china.dev.dao.UserDao;
+import com.china.dev.entity.User;
 
 /**
  * @ClassName: UserDaoImpl
