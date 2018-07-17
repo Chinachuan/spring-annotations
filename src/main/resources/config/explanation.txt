@@ -23,6 +23,56 @@
 	spring.mvc.static-path-pattern=/**
   }
   
+
+日志配置：{
+
+	日志配置说明：
+		日志输出内容元素具体如下：
+			时间日期：精确到毫秒
+			日志级别：ERROR, WARN, INFO, DEBUG or TRACE
+			进程ID
+			分隔符：— 标识实际日志的开始
+			线程名：方括号括起来（可能会截断控制台输出）
+			Logger名：通常使用源代码的类名
+			日志内容  
+		
+		日志级别从低到高分为：
+			TRACE < DEBUG < INFO < WARN < ERROR < FATAL
+			如果设置为 WARN ，则低于 WARN 的信息都不会输出。 
+			Spring Boot中默认配置ERROR、WARN和INFO级别的日志输出到控制台。
+			
+		日志输出
+		    logger.info("name:{},age:{}",name,age)
+			可以使用{} 占位符来拼接字符串，而不需要使用““+””来连接字符串。
+		
+		配置说明
+			logging.level.com.dudu=DEBUG：com.dudu包下所有class以DEBUG级别输出
+			logging.level.root=WARN：root日志以WARN级别输出
+			
+		根据不同的日志系统，你可以按如下规则组织配置文件名，就能被正确加载：
+			Logback：logback-spring.xml, logback-spring.groovy, logback.xml, logback.groovy
+			Log4j：log4j-spring.properties, log4j-spring.xml, log4j.properties, log4j.xml
+			Log4j2：log4j2-spring.xml, log4j2.xml
+			JDK (Java Util Logging)：logging.properties
+			
+		解析
+			<pattern>
+                <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
+            </pattern>
+            
+            %d{HH: mm:ss.SSS}——日志输出时间
+			%thread——输出日志的进程名字，这在Web应用以及异步任务处理中很有用
+			%-5level——日志级别，并且使用5个字符靠左对齐
+			%logger{36}——日志输出者的名字
+			%msg——日志消息
+			%n——平台的换行符 
+			
+            
+
+}
+
+
+  
   
   
   
