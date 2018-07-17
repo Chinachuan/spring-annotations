@@ -16,7 +16,7 @@ public class AmainTest {
 	public void test01(){
 		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanConfigTest.class);
 		Object bean = applicationContext.getBean("colorTest");
-		System.out.println("=======>" + bean);
+		System.out.println(bean);
 	}
 	
 	
@@ -42,6 +42,7 @@ public class AmainTest {
 		 *
 		 *		同理，该注解也可以写在类上
 		 */
+		
 		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ProfileConfigTest.class);
 		String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
 		for (String name : beanDefinitionNames) {
