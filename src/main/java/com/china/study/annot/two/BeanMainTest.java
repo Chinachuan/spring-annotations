@@ -2,6 +2,7 @@ package com.china.study.annot.two;
 
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
  * @ClassName: BeanMainTest
@@ -13,7 +14,7 @@ public class BeanMainTest {
 	
 	/**
 	 * 说明：
-	 *    该测试类，主要测试，bean的生命周期
+	 *    该测试类，主要测试，bean的生命周期、属性赋值
 	 * 
 	 */
 	
@@ -29,5 +30,30 @@ public class BeanMainTest {
 		// 容器销毁
 		applicationContext.close();
 	}
+	
+	
+	
+	/**
+	 * 测试 @value 赋值
+	 */
+	@Test
+	public void test02(){
+		@SuppressWarnings("resource")
+		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanConfigTest.class);
+		EntityUserTest bean = (EntityUserTest) applicationContext.getBean("entityUserTest");
+		
+		ConfigurableEnvironment environment = applicationContext.getEnvironment();
+		String property = environment.getProperty("os.name");
+		System.out.println("当前操作系统是："+property);
+		
+		String property2 = environment.getProperty("test.name");
+		System.out.println("配置的外部环境的取值："+property2);
+		
+		System.out.println("赋值测试：========>" + bean);
+		
+	}
+	
+	
+	
 
 }

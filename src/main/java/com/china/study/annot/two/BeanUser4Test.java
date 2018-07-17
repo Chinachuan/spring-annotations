@@ -2,7 +2,6 @@ package com.china.study.annot.two;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.stereotype.Component;
 
 /**
  * @ClassName: BeanUserTest
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @author: Jiuchuan.Shi
  * @Date: 2018年7月17日 上午10:34:27
  */
-@Component
+//@Component    //(声明组件，包扫描的时候，会自动加载到容器中)
 public class BeanUser4Test implements BeanPostProcessor{
 	
 	public BeanUser4Test(){

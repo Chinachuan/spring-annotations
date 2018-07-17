@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +26,10 @@ public class UserController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	
+	/**
+	 * @Qualifier("userService") 如果存在多个类型相同的userService，@Qualifier名确指定使用哪个userService
+	 */
+	@Qualifier("userService")
 	@Autowired
 	private UserService userService;
 	
