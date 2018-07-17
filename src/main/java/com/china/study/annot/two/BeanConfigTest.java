@@ -17,8 +17,7 @@ import org.springframework.context.annotation.PropertySource;
 public class BeanConfigTest {
 	
 	/**
-	 * 主要测试bean加载的声明周期，和赋值
-	 * @return
+	 * 主要测试bean加载的生命周期，和赋值
 	 */
 	@Bean(initMethod="init",destroyMethod="detory")
 	public BeanUserTest beanUserTest(){
