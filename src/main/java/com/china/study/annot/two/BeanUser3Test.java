@@ -4,7 +4,6 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.Aware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
@@ -17,7 +16,7 @@ import org.springframework.context.ApplicationContextAware;
 //@Component    //(声明组件，包扫描的时候，会自动加载到容器中)
 public class BeanUser3Test implements ApplicationContextAware{
 	
-	private ApplicationContext applicationContexts;
+	//private ApplicationContext applicationContexts;
 	
 	public BeanUser3Test(){
 		System.out.println("BeanUser3Test==>构造器...BeanUser3Test...");
@@ -41,7 +40,7 @@ public class BeanUser3Test implements ApplicationContextAware{
 	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 		// TODO Auto-generated method stub
-		this.applicationContexts = applicationContext;
+		//this.applicationContexts = applicationContext;
 	}
 
 	
