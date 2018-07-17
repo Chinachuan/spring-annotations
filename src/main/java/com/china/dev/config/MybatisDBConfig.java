@@ -20,7 +20,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
  * @Date: 2018年7月13日 上午10:03:07
  */
 @Configuration
-@MapperScan(basePackages = {"com.china.dao"}, sqlSessionFactoryRef = "sqlSessionFactory")
+@MapperScan(basePackages = {"com.china.dev.dao"}, sqlSessionFactoryRef = "sqlSessionFactory")
 public class MybatisDBConfig {
 	
 	private static final String MAPPER_LOCATION = "classpath:sqlmap/**/*.xml";
